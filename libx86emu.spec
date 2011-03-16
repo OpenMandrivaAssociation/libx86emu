@@ -5,7 +5,7 @@
 Name:           libx86emu
 License:        BSD 3-Clause
 Group:          System/Libraries
-Summary:        A small x86 emulation library.
+Summary:        A small x86 emulation library
 Version:        1.1
 Release:        %mkrel 1
 Source:         libx86emu-1.1.tar.bz2
