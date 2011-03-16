@@ -18,7 +18,7 @@ execution logging functions.
 
 
 %package -n     %{libname}
-Summary:        A small x86 emulation library.
+Summary:        A small x86 emulation library
 Group:          System/Libraries
 
 %description -n %{libname}
@@ -26,7 +26,7 @@ Small x86 emulation library with focus of easy usage and extended
 execution logging functions.
 
 %package -n     %{develname}
-Summary:        A small x86 emulation library.
+Summary:        A small x86 emulation library
 Group:          System/Libraries
 Requires:       %{libname} = %version-%release
 Provides:		%name-devel
