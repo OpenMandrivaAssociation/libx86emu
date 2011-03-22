@@ -39,7 +39,7 @@ execution logging functions.
 %setup -q
 
 %build
-make LIBDIR=%{_libdir}
+make CFLAGS="%{optflags} -fPIC" LIBDIR=%{_libdir}
 
 %install
 install -d -m 755 %{buildroot}%{_libdir}
