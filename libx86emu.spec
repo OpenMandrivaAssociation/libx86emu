@@ -7,15 +7,14 @@ License:        BSD 3-Clause
 Group:          System/Libraries
 Summary:        A small x86 emulation library
 Version:        1.1
-Release:        %mkrel 1
+Release:        2
 Source:         %{name}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-ExclusiveArch:  %ix86 x86_64
+ExclusiveArch:  %{ix86} x86_64
 
 %description
 Small x86 emulation library with focus of easy usage and extended
 execution logging functions.
-
 
 %package -n     %{libname}
 Summary:        A small x86 emulation library
@@ -28,8 +27,8 @@ execution logging functions.
 %package -n     %{develname}
 Summary:        A small x86 emulation library
 Group:          System/Libraries
-Requires:       %{libname} = %version-%release
-Provides:		%name-devel
+Requires:       %{libname} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
 
 %description -n %{develname}
 Small x86 emulation library with focus of easy usage and extended
@@ -39,15 +38,13 @@ execution logging functions.
 %setup -q
 
 %build
-make CFLAGS="%{optflags} -fPIC" LIBDIR=%{_libdir}
+%make CFLAGS="%{optflags} -fPIC"
 
 %install
-install -d -m 755 %{buildroot}%{_libdir}
-make install DESTDIR=%{buildroot} LIBDIR=%{_libdir}
+%makeinstall_std LIBDIR=%{_libdir}
 
 %clean 
 rm -rf %{buildroot}
-
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -56,6 +53,6 @@ rm -rf %{buildroot}
 %files -n %{develname}
 %defattr(-,root,root)
 %{_libdir}/*.so
-/usr/include/x86emu.h
+%{_includedir}/x86emu.h
 %doc README LICENSE
 
