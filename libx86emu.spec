@@ -7,7 +7,7 @@ License:        BSD 3-Clause
 Group:          System/Libraries
 Summary:        A small x86 emulation library
 Version:        1.1
-Release:        2
+Release:        3
 Source:         %{name}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 ExclusiveArch:  %{ix86} x86_64
