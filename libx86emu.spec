@@ -6,9 +6,10 @@ Summary:	A small x86 emulation library
 Name:		libx86emu
 License:	BSD 3-Clause
 Group:		System/Libraries
-Version:	1.1
-Release:	5
-Source0:	%{name}-%{version}.tar.bz2
+URL:		http://gitorious.org/x86emu/libx86emu
+Version:	1.3
+Release:	1
+Source0:	%{name}-%{version}.tar.lzma
 ExclusiveArch:	%{ix86} x86_64
 
 %description
@@ -18,7 +19,6 @@ execution logging functions.
 %package -n     %{libname}
 Summary:	A small x86 emulation library
 Group:		System/Libraries
-
 %description -n %{libname}
 Small x86 emulation library with focus of easy usage and extended
 execution logging functions.
