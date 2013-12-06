@@ -8,7 +8,7 @@ License:	BSD 3-Clause
 Group:		System/Libraries
 URL:		http://gitorious.org/x86emu/libx86emu
 Version:	1.3
-Release:	4
+Release:	5
 Source0:	%{name}-%{version}.tar.lzma
 ExclusiveArch:	%{ix86} x86_64
 
