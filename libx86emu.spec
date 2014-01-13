@@ -7,7 +7,7 @@ Name:		libx86emu
 License:	BSD 3-Clause
 Group:		System/Libraries
 Version:	1.1
-Release:	6
+Release:	7
 Source0:	%{name}-%{version}.tar.bz2
 ExclusiveArch:	%{ix86} x86_64
 
