@@ -1,4 +1,4 @@
-%define major 1
+%define major	1
 %define libname	%mklibname x86emu %{major}
 %define devname	%mklibname x86emu -d
 
@@ -7,9 +7,9 @@ Name:		libx86emu
 License:	BSD 3-Clause
 Group:		System/Libraries
 URL:		http://gitorious.org/x86emu/libx86emu
-Version:	1.3
-Release:	5
-Source0:	%{name}-%{version}.tar.lzma
+Version:	1.4
+Release:	1
+Source0:	%{name}-%{version}.tar.gz
 ExclusiveArch:	%{ix86} x86_64
 
 %description
@@ -19,6 +19,7 @@ execution logging functions.
 %package -n     %{libname}
 Summary:	A small x86 emulation library
 Group:		System/Libraries
+
 %description -n %{libname}
 Small x86 emulation library with focus of easy usage and extended
 execution logging functions.
@@ -49,4 +50,3 @@ execution logging functions.
 %doc README LICENSE
 %{_libdir}/*.so
 %{_includedir}/x86emu.h
-
