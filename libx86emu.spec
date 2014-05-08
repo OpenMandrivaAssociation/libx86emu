@@ -10,7 +10,9 @@ URL:		http://gitorious.org/x86emu/libx86emu
 Version:	1.4
 Release:	1
 Source0:	%{name}-%{version}.tar.gz
-ExclusiveArch:	%{ix86} x86_64
+# does not build on ppc, ppc64 and s390* yet, due to the lack of port i/o
+# redirection and video routing
+ExcludeArch:    ppc ppc64 s390 s390x %{sparcx}
 
 %description
 Small x86 emulation library with focus of easy usage and extended
