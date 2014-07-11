@@ -8,7 +8,7 @@ License:	BSD 3-Clause
 Group:		System/Libraries
 URL:		http://gitorious.org/x86emu/libx86emu
 Version:	1.4
-Release:	2
+Release:	3
 Source0:	%{name}-%{version}.tar.gz
 # does not build on ppc, ppc64 and s390* yet, due to the lack of port i/o
 # redirection and video routing
