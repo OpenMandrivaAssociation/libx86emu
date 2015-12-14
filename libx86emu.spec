@@ -1,6 +1,7 @@
 %define major	1
 %define libname	%mklibname x86emu %{major}
 %define devname	%mklibname x86emu -d
+%define debug_package %{nil}
 
 Summary:	A small x86 emulation library
 Name:		libx86emu
@@ -8,7 +9,7 @@ License:	BSD 3-Clause
 Group:		System/Libraries
 URL:		http://gitorious.org/x86emu/libx86emu
 Version:	1.4
-Release:	6
+Release:	7
 Source0:	%{name}-%{version}.tar.gz
 # does not build on ppc, ppc64 and s390* yet, due to the lack of port i/o
 # redirection and video routing
