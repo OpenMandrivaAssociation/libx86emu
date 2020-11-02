@@ -1,25 +1,22 @@
-%define major	1
-%define libname	%mklibname x86emu %{major}
-%define devname	%mklibname x86emu -d
+%define major 3
+%define libname %mklibname x86emu %{major}
+%define devname %mklibname x86emu -d
 %define debug_package %{nil}
 
 Summary:	A small x86 emulation library
 Name:		libx86emu
 License:	BSD 3-Clause
 Group:		System/Libraries
-URL:		http://gitorious.org/x86emu/libx86emu
-Version:	1.4
-Release:	10
-Source0:	%{name}-%{version}.tar.gz
-# does not build on ppc, ppc64 and s390* yet, due to the lack of port i/o
-# redirection and video routing
-ExcludeArch:    ppc ppc64 s390 s390x %{sparcx}
+URL:		https://github.com/wfeldt/libx86emu
+Version:	3.1
+Release:	1
+Source0:	https://github.com/wfeldt/libx86emu/archive/%{version}/%{name}-%{version}.tar.gz
 
 %description
 Small x86 emulation library with focus of easy usage and extended
 execution logging functions.
 
-%package -n     %{libname}
+%package -n %{libname}
 Summary:	A small x86 emulation library
 Group:		System/Libraries
 
@@ -27,7 +24,7 @@ Group:		System/Libraries
 Small x86 emulation library with focus of easy usage and extended
 execution logging functions.
 
-%package -n     %{devname}
+%package -n %{devname}
 Summary:	A small x86 emulation library
 Group:		System/Libraries
 Requires:	%{libname} = %{EVRD}
@@ -38,13 +35,15 @@ Small x86 emulation library with focus of easy usage and extended
 execution logging functions.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%make CFLAGS="%{optflags} -fPIC"
+echo %{version} > VERSION
+%set_build_flags
+%make_build CFLAGS="%{optflags} -fPIC" shared
 
 %install
-%makeinstall_std LIBDIR=%{_libdir}
+%make_install LIBDIR=%{_libdir}
 
 %files -n %{libname}
 %{_libdir}/libx86emu.so.%{major}*
