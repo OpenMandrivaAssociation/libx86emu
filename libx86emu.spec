@@ -49,6 +49,6 @@ echo %{version} > VERSION
 %{_libdir}/libx86emu.so.%{major}*
 
 %files -n %{devname}
-%doc README LICENSE
+%doc README.md LICENSE
 %{_libdir}/*.so
 %{_includedir}/x86emu.h
