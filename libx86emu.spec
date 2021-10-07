@@ -1,7 +1,6 @@
 %define major 3
 %define libname %mklibname x86emu %{major}
 %define devname %mklibname x86emu -d
-%define debug_package %{nil}
 
 Summary:	A small x86 emulation library
 Name:		libx86emu
