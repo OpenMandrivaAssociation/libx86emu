@@ -7,7 +7,7 @@ Name:		libx86emu
 License:	BSD 3-Clause
 Group:		System/Libraries
 URL:		https://github.com/wfeldt/libx86emu
-Version:	3.1
+Version:	3.5
 Release:	1
 Source0:	https://github.com/wfeldt/libx86emu/archive/%{version}/%{name}-%{version}.tar.gz
 
